@@ -15,17 +15,22 @@ namespace Container {
     class HashTable {
     public:
         HashTable(UInt64 size);
+        HashTable(const HashTable &object);
         
-        const UInt64 size = 0;
+        virtual ~HashTable();
+        
+        const UInt64 size = 0LL;
         
         UInt64 hashValue(String key);
-        void insert(String key) noexcept;
+        void insert(String key);
         Boolean retrieve(String key) noexcept;
-        Boolean remove(String key) noexcept;
+        void remove(String key);
+        
+        UInt64 getCollisionCount() const noexcept;
     
     private:
         String *data = nullptr;
-        UInt64 count = 0;
-        UInt64 collisionCount = 0;
+        UInt64 count = 0LL;
+        UInt64 collisionCount = 0LL;
     };
 }

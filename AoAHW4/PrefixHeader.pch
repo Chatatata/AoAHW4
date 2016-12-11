@@ -38,3 +38,6 @@ typedef std::atomic<UInt> AtomicUInt;
 typedef std::string String;
 typedef size_t Size;
 typedef bool Boolean;
+
+#define protocol struct
+#define convenience

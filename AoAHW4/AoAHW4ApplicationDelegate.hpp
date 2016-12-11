@@ -1,5 +1,5 @@
 //
-//  AoAHW2ApplicationDelegate.hpp
+//  AoAHW4ApplicationDelegate.hpp
 //  AlgoHW2
 //
 //  Created by Buğra Ekuklu on 04.11.2016.
@@ -10,7 +10,7 @@
 
 #include "Bootstrapping/Application.hpp"
 
-class AoAHW2ApplicationDelegate : public ApplicationDelegate {
+class AoAHW4ApplicationDelegate : public ApplicationDelegate {
 public:
     UInt16 applicationDidStart(const Container::Array<String> &arguments) const noexcept override;
 };

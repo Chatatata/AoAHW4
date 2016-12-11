@@ -8,9 +8,7 @@
 
 #pragma once
 
-#include "../Containers/Array.hpp"
-
-#include <type_traits>
+#include "../Containers/Array.cpp"
 
 class ApplicationDelegate {
 public:

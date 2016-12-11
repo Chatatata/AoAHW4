@@ -17,7 +17,7 @@ Application::Application(const ApplicationDelegate &delegate,
     Array<String> argumentVector;
     
     for (Size i = 0; i < static_cast<Size>(argc); ++i) {
-        argumentVector.push_back(argv[i]);
+        argumentVector.append(argv[i]);
     }
     
     returnValue = delegate.applicationDidStart(argumentVector);

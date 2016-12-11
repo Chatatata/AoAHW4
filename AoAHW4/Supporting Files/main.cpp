@@ -6,8 +6,8 @@
 //  Copyright © 2016 The Digital Warehouse. All rights reserved.
 //
 
-#include "../AoAHW2ApplicationDelegate.hpp"
+#include "../AoAHW4ApplicationDelegate.hpp"
 
 int main(int argc, const char * argv[]) {
-    return Application(AoAHW2ApplicationDelegate(), argc, argv);
+    return Application(AoAHW4ApplicationDelegate(), argc, argv);
 }

@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AA1136F1DF8724D00CAFE41 /* AoAHW2ApplicationDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA113641DF8724D00CAFE41 /* AoAHW2ApplicationDelegate.cpp */; };
+		5A2F07F21DFD805E00BC6715 /* Array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F07F11DFD805E00BC6715 /* Array.cpp */; };
+		5A2F07F61DFD8B9600BC6715 /* RangeException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F07F41DFD8B9600BC6715 /* RangeException.cpp */; };
+		5A2F07FA1DFD981D00BC6715 /* Hashable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F07F81DFD981D00BC6715 /* Hashable.cpp */; };
+		5A2F07FD1DFD9B3900BC6715 /* DuplicateValueException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F07FB1DFD9B3900BC6715 /* DuplicateValueException.cpp */; };
+		5A2F08001DFD9D1200BC6715 /* BufferOverrunException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F07FE1DFD9D1200BC6715 /* BufferOverrunException.cpp */; };
+		5A2F08031DFD9E9500BC6715 /* BadAllocationException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F08011DFD9E9500BC6715 /* BadAllocationException.cpp */; };
+		5A2F08081DFDA37800BC6715 /* SpellCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F08061DFDA37800BC6715 /* SpellCheck.cpp */; };
+		5A2F080F1DFDA57800BC6715 /* SpellCheckController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F080D1DFDA53F00BC6715 /* SpellCheckController.cpp */; };
+		5AA1136F1DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA113641DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp */; };
 		5AA113701DF8724D00CAFE41 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA113671DF8724D00CAFE41 /* Application.cpp */; };
 		5AA113721DF8724D00CAFE41 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA1136E1DF8724D00CAFE41 /* main.cpp */; };
 		5AA113751DF8728800CAFE41 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA113731DF8728800CAFE41 /* HashTable.cpp */; };
@@ -26,9 +34,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A2F07F11DFD805E00BC6715 /* Array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Array.cpp; sourceTree = "<group>"; };
+		5A2F07F41DFD8B9600BC6715 /* RangeException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RangeException.cpp; sourceTree = "<group>"; };
+		5A2F07F51DFD8B9600BC6715 /* RangeException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RangeException.hpp; sourceTree = "<group>"; };
+		5A2F07F81DFD981D00BC6715 /* Hashable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hashable.cpp; sourceTree = "<group>"; };
+		5A2F07F91DFD981D00BC6715 /* Hashable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Hashable.hpp; sourceTree = "<group>"; };
+		5A2F07FB1DFD9B3900BC6715 /* DuplicateValueException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DuplicateValueException.cpp; sourceTree = "<group>"; };
+		5A2F07FC1DFD9B3900BC6715 /* DuplicateValueException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DuplicateValueException.hpp; sourceTree = "<group>"; };
+		5A2F07FE1DFD9D1200BC6715 /* BufferOverrunException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BufferOverrunException.cpp; sourceTree = "<group>"; };
+		5A2F07FF1DFD9D1200BC6715 /* BufferOverrunException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BufferOverrunException.hpp; sourceTree = "<group>"; };
+		5A2F08011DFD9E9500BC6715 /* BadAllocationException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BadAllocationException.cpp; sourceTree = "<group>"; };
+		5A2F08021DFD9E9500BC6715 /* BadAllocationException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BadAllocationException.hpp; sourceTree = "<group>"; };
+		5A2F08061DFDA37800BC6715 /* SpellCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpellCheck.cpp; sourceTree = "<group>"; };
+		5A2F08071DFDA37800BC6715 /* SpellCheck.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpellCheck.hpp; sourceTree = "<group>"; };
+		5A2F080D1DFDA53F00BC6715 /* SpellCheckController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpellCheckController.cpp; sourceTree = "<group>"; };
+		5A2F080E1DFDA53F00BC6715 /* SpellCheckController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpellCheckController.hpp; sourceTree = "<group>"; };
+		5A2F08111DFDA75400BC6715 /* SpellCheckResult.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpellCheckResult.hpp; sourceTree = "<group>"; };
 		5AA1135A1DF8721200CAFE41 /* AoAHW4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AoAHW4; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AA113641DF8724D00CAFE41 /* AoAHW2ApplicationDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AoAHW2ApplicationDelegate.cpp; sourceTree = "<group>"; };
-		5AA113651DF8724D00CAFE41 /* AoAHW2ApplicationDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AoAHW2ApplicationDelegate.hpp; sourceTree = "<group>"; };
+		5AA113641DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AoAHW4ApplicationDelegate.cpp; sourceTree = "<group>"; };
+		5AA113651DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AoAHW4ApplicationDelegate.hpp; sourceTree = "<group>"; };
 		5AA113671DF8724D00CAFE41 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		5AA113681DF8724D00CAFE41 /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		5AA1136A1DF8724D00CAFE41 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
@@ -50,6 +74,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A2F07F31DFD8B7A00BC6715 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				5A2F07F41DFD8B9600BC6715 /* RangeException.cpp */,
+				5A2F07F51DFD8B9600BC6715 /* RangeException.hpp */,
+				5A2F07FB1DFD9B3900BC6715 /* DuplicateValueException.cpp */,
+				5A2F07FC1DFD9B3900BC6715 /* DuplicateValueException.hpp */,
+				5A2F07FE1DFD9D1200BC6715 /* BufferOverrunException.cpp */,
+				5A2F07FF1DFD9D1200BC6715 /* BufferOverrunException.hpp */,
+				5A2F08011DFD9E9500BC6715 /* BadAllocationException.cpp */,
+				5A2F08021DFD9E9500BC6715 /* BadAllocationException.hpp */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		5A2F07F71DFD980800BC6715 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5A2F07F81DFD981D00BC6715 /* Hashable.cpp */,
+				5A2F07F91DFD981D00BC6715 /* Hashable.hpp */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5A2F08051DFDA36400BC6715 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A2F08061DFDA37800BC6715 /* SpellCheck.cpp */,
+				5A2F08071DFDA37800BC6715 /* SpellCheck.hpp */,
+				5A2F08111DFDA75400BC6715 /* SpellCheckResult.hpp */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A2F080C1DFDA53F00BC6715 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A2F080D1DFDA53F00BC6715 /* SpellCheckController.cpp */,
+				5A2F080E1DFDA53F00BC6715 /* SpellCheckController.hpp */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5AA113511DF8721200CAFE41 = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +136,14 @@
 		5AA1135C1DF8721200CAFE41 /* AoAHW4 */ = {
 			isa = PBXGroup;
 			children = (
-				5AA113641DF8724D00CAFE41 /* AoAHW2ApplicationDelegate.cpp */,
-				5AA113651DF8724D00CAFE41 /* AoAHW2ApplicationDelegate.hpp */,
+				5AA113641DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp */,
+				5AA113651DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.hpp */,
 				5AA113661DF8724D00CAFE41 /* Bootstrapping */,
+				5A2F07F71DFD980800BC6715 /* Protocols */,
 				5AA113691DF8724D00CAFE41 /* Containers */,
+				5A2F08051DFDA36400BC6715 /* Models */,
+				5A2F080C1DFDA53F00BC6715 /* Controllers */,
+				5A2F07F31DFD8B7A00BC6715 /* ErrorHandling */,
 				5AA1136B1DF8724D00CAFE41 /* PrefixHeader.pch */,
 				5AA1136C1DF8724D00CAFE41 /* README.md */,
 				5AA1136D1DF8724D00CAFE41 /* Supporting Files */,
@@ -93,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				5AA1136A1DF8724D00CAFE41 /* Array.hpp */,
+				5A2F07F11DFD805E00BC6715 /* Array.cpp */,
 				5AA113731DF8728800CAFE41 /* HashTable.cpp */,
 				5AA113741DF8728800CAFE41 /* HashTable.hpp */,
 			);
@@ -163,10 +235,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2F08001DFD9D1200BC6715 /* BufferOverrunException.cpp in Sources */,
 				5AA113701DF8724D00CAFE41 /* Application.cpp in Sources */,
+				5A2F07FA1DFD981D00BC6715 /* Hashable.cpp in Sources */,
+				5A2F08031DFD9E9500BC6715 /* BadAllocationException.cpp in Sources */,
+				5A2F07F61DFD8B9600BC6715 /* RangeException.cpp in Sources */,
+				5A2F07FD1DFD9B3900BC6715 /* DuplicateValueException.cpp in Sources */,
 				5AA113721DF8724D00CAFE41 /* main.cpp in Sources */,
 				5AA113751DF8728800CAFE41 /* HashTable.cpp in Sources */,
-				5AA1136F1DF8724D00CAFE41 /* AoAHW2ApplicationDelegate.cpp in Sources */,
+				5AA1136F1DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp in Sources */,
+				5A2F07F21DFD805E00BC6715 /* Array.cpp in Sources */,
+				5A2F08081DFDA37800BC6715 /* SpellCheck.cpp in Sources */,
+				5A2F080F1DFDA57800BC6715 /* SpellCheckController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +367,7 @@
 				5AA113631DF8721200CAFE41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
