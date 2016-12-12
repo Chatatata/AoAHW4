@@ -25,6 +25,7 @@ AoAHW4ApplicationDelegate::applicationDidStart(const Container::Array<String> &a
 {
     using Container::HashTable;
     using InputFileStream = std::ifstream;
+    using OutputFileStream = std::ofstream;
     
     if (arguments.getLength() == 2) {
         UInt64 hashTableSize = std::stoll(arguments[1]);
@@ -32,6 +33,7 @@ AoAHW4ApplicationDelegate::applicationDidStart(const Container::Array<String> &a
         HashTable hashTable(hashTableSize);
         SpellCheckController scc(hashTable);
         InputFileStream inputFileStream("words.txt");
+        OutputFileStream outputFileStream("150120016_output.txt");
         std::string bufferString;
         
         try {
@@ -153,9 +155,9 @@ AoAHW4ApplicationDelegate::applicationDidStart(const Container::Array<String> &a
             std::cout << "Caught buffer overrun exception at address: " << &boe << std::endl;
         }
                     
-                    for (UInt64 i = 0; i < hashTable.size; ++i) {
-                        std::cout << i << ": " << hashTable.data[i] << std::endl;
-                    }
+        for (UInt64 i = 0; i < hashTable.size; ++i) {
+            outputFileStream << i << ": " << hashTable.data[i] << std::endl;
+        }
                     
         return 0;
     } else {
