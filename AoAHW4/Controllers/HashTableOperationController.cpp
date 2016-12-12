@@ -11,9 +11,11 @@
 #include <iostream>
 #include <fstream>
 
+#include "../Containers/Array.cpp"
 #include "../ErrorHandling/DuplicateValueException.hpp"
 #include "../ErrorHandling/BadAllocationException.hpp"
 #include "../ErrorHandling/RangeException.hpp"
+
 
 HashTableOperationController::HashTableOperationController(Container::HashTable &hashTable)
 : hashTable(hashTable), scc(hashTable)

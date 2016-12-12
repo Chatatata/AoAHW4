@@ -9,6 +9,9 @@
 #include "SpellCheckController.hpp"
 
 #include <algorithm>
+#include <cstring>
+
+#include "../Containers/Array.cpp"
 
 using Container::Array;
 
