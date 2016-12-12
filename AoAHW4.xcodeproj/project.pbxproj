@@ -15,6 +15,7 @@
 		5A2F08031DFD9E9500BC6715 /* BadAllocationException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F08011DFD9E9500BC6715 /* BadAllocationException.cpp */; };
 		5A2F08081DFDA37800BC6715 /* SpellCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F08061DFDA37800BC6715 /* SpellCheck.cpp */; };
 		5A2F080F1DFDA57800BC6715 /* SpellCheckController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F080D1DFDA53F00BC6715 /* SpellCheckController.cpp */; };
+		5A479EB91DFF092C00E59597 /* HashTableOperationController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A479EB71DFF092C00E59597 /* HashTableOperationController.cpp */; };
 		5AA1136F1DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA113641DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp */; };
 		5AA113701DF8724D00CAFE41 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA113671DF8724D00CAFE41 /* Application.cpp */; };
 		5AA113721DF8724D00CAFE41 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA1136E1DF8724D00CAFE41 /* main.cpp */; };
@@ -50,6 +51,8 @@
 		5A2F080D1DFDA53F00BC6715 /* SpellCheckController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpellCheckController.cpp; sourceTree = "<group>"; };
 		5A2F080E1DFDA53F00BC6715 /* SpellCheckController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpellCheckController.hpp; sourceTree = "<group>"; };
 		5A2F08111DFDA75400BC6715 /* SpellCheckResult.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpellCheckResult.hpp; sourceTree = "<group>"; };
+		5A479EB71DFF092C00E59597 /* HashTableOperationController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashTableOperationController.cpp; sourceTree = "<group>"; };
+		5A479EB81DFF092C00E59597 /* HashTableOperationController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashTableOperationController.hpp; sourceTree = "<group>"; };
 		5AA1135A1DF8721200CAFE41 /* AoAHW4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AoAHW4; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA113641DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AoAHW4ApplicationDelegate.cpp; sourceTree = "<group>"; };
 		5AA113651DF8724D00CAFE41 /* AoAHW4ApplicationDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AoAHW4ApplicationDelegate.hpp; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 			children = (
 				5A2F080D1DFDA53F00BC6715 /* SpellCheckController.cpp */,
 				5A2F080E1DFDA53F00BC6715 /* SpellCheckController.hpp */,
+				5A479EB71DFF092C00E59597 /* HashTableOperationController.cpp */,
+				5A479EB81DFF092C00E59597 /* HashTableOperationController.hpp */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				5A2F07FA1DFD981D00BC6715 /* Hashable.cpp in Sources */,
 				5A2F08031DFD9E9500BC6715 /* BadAllocationException.cpp in Sources */,
 				5A2F07F61DFD8B9600BC6715 /* RangeException.cpp in Sources */,
+				5A479EB91DFF092C00E59597 /* HashTableOperationController.cpp in Sources */,
 				5A2F07FD1DFD9B3900BC6715 /* DuplicateValueException.cpp in Sources */,
 				5AA113721DF8724D00CAFE41 /* main.cpp in Sources */,
 				5AA113751DF8728800CAFE41 /* HashTable.cpp in Sources */,

@@ -23,7 +23,7 @@ SpellCheckController::checkSpelling(const String &candidateWord)
 {
     if (wordsList.retrieve(candidateWord)) {
         
-        return SpellCheck(candidateWord, Array<String>(), SpellCheckResult::Success);
+        return SpellCheck(candidateWord, Array<String>(), SpellCheckResult::Success, 0LL);
     } else {
         //  Copy the candidate word string
         auto copyOfCandidateWord = String(candidateWord);
@@ -40,6 +40,9 @@ SpellCheckController::checkSpelling(const String &candidateWord)
         //  Allocate the result array
         auto availableWords = Array<String>();
         
+        //  Count the collisions
+        UInt64 collisions = 0LL;
+        
         for (UInt64 letterIndex = 0; letterIndex < candidateWord.size(); ++letterIndex) {
             for (signed char candidateLetter = 'a'; candidateLetter <= 'z'; ++candidateLetter) {
                 //  Rollback modifications on the altered string
@@ -52,9 +55,14 @@ SpellCheckController::checkSpelling(const String &candidateWord)
                 if (wordsList.retrieve(alteredCString)) {
                     availableWords.append(alteredCString);
                 }
+                
+                collisions += wordsList.getLastCollisionCount();
             }
         }
         
-        return SpellCheck(candidateWord, availableWords, SpellCheckResult::Failure);
+        //  Increment the spell checks count
+        spellChecksCount += 1;
+        
+        return SpellCheck(candidateWord, availableWords, SpellCheckResult::Failure, collisions);
     }
 }

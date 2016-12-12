@@ -12,8 +12,9 @@
 
 SpellCheck::SpellCheck(String word,
                        Container::Array<String> availableWords,
-                       SpellCheckResult result)
-: word(word), availableWords(availableWords), result(result)
+                       SpellCheckResult result,
+                       UInt64 numberOfCollisions)
+: word(word), availableWords(availableWords), result(result), numberOfCollisions(numberOfCollisions)
 {
     //  Blank implementation
 }

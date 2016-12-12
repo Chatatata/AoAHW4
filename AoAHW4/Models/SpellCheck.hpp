@@ -12,9 +12,10 @@
 #include "SpellCheckResult.hpp"
 
 struct SpellCheck {
-    convenience SpellCheck(String word, Container::Array<String> availableWords, SpellCheckResult result);
+    convenience SpellCheck(String word, Container::Array<String> availableWords, SpellCheckResult result, UInt64 numberOfCollisions);
     
     const String word;
     const Container::Array<String> availableWords;
     const SpellCheckResult result;
+    const UInt64 numberOfCollisions;
 };
