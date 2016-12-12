@@ -12,7 +12,7 @@
 
 using Container::Array;
 
-SpellCheckController::SpellCheckController(const HashTable &wordsList)
+SpellCheckController::SpellCheckController(Container::HashTable &wordsList)
 : wordsList(wordsList)
 {
     //  Blank implementation

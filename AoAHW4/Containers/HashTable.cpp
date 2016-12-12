@@ -52,26 +52,28 @@ HashTable::hashValue(String key)
     return result;
 }
 
-void
+UInt64
 HashTable::insert(String key)
 {
+    lastCollisionCount = 0LL;
+    
     if (count < size) {
-        auto hash = hashValue(key);
-        
-        while (1) {
+        for (auto hash = hashValue(key); hash < size; hash++) {
             if (data[hash] == key) {
                 throw DuplicateValueException();
             } else if (data[hash] == "" || data[hash] == "*") {
                 data[hash] = String(key);
+                count += 1;
                 
-                break;
+                totalCollisionCount += lastCollisionCount;
+                
+                return hash;
             } else {
-                hash += 1;
-                collisionCount += 1;
+                lastCollisionCount += 1;
             }
         }
         
-        count += 1;
+        throw BadAllocationException(size);
     } else {
         throw BadAllocationException(size);
     }
@@ -81,40 +83,89 @@ Boolean
 HashTable::retrieve(String key) noexcept
 {
     auto hash = hashValue(key);
+    lastCollisionCount = 0LL;
     
     if (hash > size) throw RangeException(hash);
     
     for (UInt64 i = hash; i < size; ++i) {
         if (data[i] == key) {
+            totalCollisionCount += lastCollisionCount;
+            
             return true;
         } else if (data[i] == "") {
+            totalCollisionCount += lastCollisionCount;
+            
             return false;
         }
+        
+        lastCollisionCount += 1LL;
     }
     
-    throw BufferOverrunException();
+    totalCollisionCount += lastCollisionCount;
+    
+    return false;
+}
+
+UInt64
+HashTable::findIndex(String key)
+{
+    auto hash = hashValue(key);
+    lastCollisionCount = 0LL;
+    
+    if (hash > size) throw RangeException(hash);
+    
+    for (UInt64 i = hash; i < size; ++i) {
+        if (data[i] == key) {
+            totalCollisionCount += lastCollisionCount;
+            
+            return i;
+        } else if (data[i] == "") {
+            totalCollisionCount += lastCollisionCount;
+            
+            throw RangeException(size);
+        }
+        
+        lastCollisionCount += 1LL;
+    }
+    
+    totalCollisionCount += lastCollisionCount;
+    
+    throw RangeException(size);
 }
 
 void
 HashTable::remove(String key)
 {
     auto hash = hashValue(key);
+    lastCollisionCount = 0LL;
     
     for (UInt64 i = hash; i < size; ++i) {
         if (data[i] == key) {
             data[i] = "*";
             
+            totalCollisionCount += lastCollisionCount;
+            
             return;
         } else if (data[i] == "") {
+            totalCollisionCount += lastCollisionCount;
+            
             throw RangeException(i);
         }
+        
+        lastCollisionCount += 1LL;
     }
     
-    throw BufferOverrunException();
+    throw RangeException(size);
 }
 
 UInt64
-HashTable::getCollisionCount() const noexcept
+HashTable::getLastCollisionCount() const noexcept
 {
-    return collisionCount;
+    return lastCollisionCount;
+}
+
+UInt64
+HashTable::getTotalCollisionCount() const noexcept
+{
+    return totalCollisionCount;
 }

@@ -9,15 +9,15 @@
 #pragma once
 
 #include "../Models/SpellCheck.hpp"
-#include "../Containers/HashTable.cpp"
+#include "../Containers/HashTable.hpp"
 
 class SpellCheckController {
 public:
-    SpellCheckController(const HashTable &wordsList);
+    SpellCheckController(Container::HashTable &wordsList);
     
     SpellCheck checkSpelling(const String &candidateWord);
     
 private:
-    HashTable wordsList;
+    Container::HashTable &wordsList;
     UInt64 spellChecksCount = 0;
 };

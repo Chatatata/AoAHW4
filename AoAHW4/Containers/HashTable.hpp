@@ -22,15 +22,19 @@ namespace Container {
         const UInt64 size = 0LL;
         
         UInt64 hashValue(String key);
-        void insert(String key);
+        UInt64 insert(String key);
         Boolean retrieve(String key) noexcept;
+        UInt64 findIndex(String key);
         void remove(String key);
         
-        UInt64 getCollisionCount() const noexcept;
+        UInt64 getLastCollisionCount() const noexcept;
+        UInt64 getTotalCollisionCount() const noexcept;
     
     private:
+    public:
         String *data = nullptr;
         UInt64 count = 0LL;
-        UInt64 collisionCount = 0LL;
+        UInt64 lastCollisionCount = 0LL;
+        UInt64 totalCollisionCount = 0LL;
     };
 }

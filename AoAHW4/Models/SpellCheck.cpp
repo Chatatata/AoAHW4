@@ -8,6 +8,8 @@
 
 #include "SpellCheck.hpp"
 
+#include "../Containers/Array.cpp"
+
 SpellCheck::SpellCheck(String word,
                        Container::Array<String> availableWords,
                        SpellCheckResult result)
