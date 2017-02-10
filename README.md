@@ -5,6 +5,11 @@ Implemented in non-purist but yet cool way, again.
 
 Pull requests will be gladly accepted, if you have suggestions.
 
+> I would like to inform you that this particular assignment submission is
+> counted as *overcomplex* by assessment authority of the homework.
+>
+> Neat.
+
 ## Run
 
 `./main`
